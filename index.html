@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer - Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo">
+            ✈️ Travel Explorer
+        </div>
+        <button id="homeButton" class="nav-button">Home</button>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore stunning destinations around the world with real-time weather updates</p>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button onclick="searchDestinations()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div id="destinationGrid" class="destination-grid"></div>
+    </main>
+
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <button class="close-btn" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <h2 id="modalTitle" class="modal-title"></h2>
+            <p id="modalCountry" class="modal-country"></p>
+
+            <div id="detailsSection" class="details-section" style="display: none;">
+                <div class="detail-item">
+                    <h4>Currency</h4>
+                    <p id="modalCurrency"></p>
+                </div>
+                <div class="detail-item">
+                    <h4>Language</h4>
+                    <p id="modalLanguage"></p>
+                </div>
+                <div class="detail-item">
+                    <h4>Best Time to Visit</h4>
+                    <p id="modalBestTime"></p>
+                </div>
+            </div>
+
+            <div id="weatherSection" class="weather-section" style="display: none;">
+                <div class="weather-info">
+                    <div class="temperature" id="temperature"></div>
+                    <div class="weather-details">
+                        <div id="weatherDescription"></div>
+                        <div id="humidity"></div>
+                        <div id="windSpeed"></div>
+                    </div>
+                </div>
+            </div>
+            <p id="modalDescription"></p>
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Photo Gallery</h3>
+            <div id="photoGallery" class="photo-gallery"></div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
